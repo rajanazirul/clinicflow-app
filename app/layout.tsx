@@ -2,8 +2,8 @@ import { ClerkProvider,SignIn } from '@clerk/nextjs'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Outfit } from 'next/font/google'
-import { SignedIn } from '@clerk/nextjs/app-beta'
-import { SignedOut } from '@clerk/nextjs/app-beta/client'
+import { SignedIn } from '@clerk/nextjs'
+import { SignedOut } from '@clerk/nextjs'
 import NavBar from '@/components/NavBar'
 
 const inter = Outfit({ subsets: ['latin'] })
@@ -22,8 +22,10 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en">
       <body className={inter.className}>
+        <NavBar/>
+
         <SignedIn>
-          <NavBar/>
+          {/* <NavBar/> */}
          {children}
         </SignedIn>
         <SignedOut>
