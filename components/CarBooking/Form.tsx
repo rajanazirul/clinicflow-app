@@ -1,12 +1,12 @@
 import { BookCreatedFlagContext } from "@/context/BookCreatedFlagContext";
-import { createBooking, getStoreLocations, getUser } from "@/services";
+import { createBooking, getStoreLocations } from "@/services";
 import React, { use, useContext, useEffect, useState } from "react";
+import { useUser } from "@clerk/nextjs";
 
 function Form({ car }: any) {
   const [storeLocation, setStoreLocation] = useState<any>([]);
   const { showToastMsg, setShowToastMsg } = useContext(BookCreatedFlagContext);
-  const [user, setUser] = useState<any>();
-
+  const { isLoaded, isSignedIn, user } = useUser();
   const [formValue, setFormValue] = useState({
     location: "",
     pickUpDate: "",
@@ -14,15 +14,14 @@ function Form({ car }: any) {
     pickUpTime: "",
     dropOffTime: "",
     contactNumber: "",
-    userName: '',
-    email: '',
+    userName: `${user?.firstName} ${user?.lastName} `|| "",
+    email: user?.primaryEmailAddress || "",
     carId: "",
   });
-
   const today: any = new Date();
+
   useEffect(() => {
     getStoreLocation_();
-    // getUser_();
   }, []);
 
   useEffect(() => {
@@ -39,12 +38,6 @@ function Form({ car }: any) {
     setStoreLocation(resp?.storesLocations);
   };
 
-  // const getUser_ = async () => {
-  //   const resp: any = await getUser();
-  //   setUser(resp?.user);
-  //   console.log('adasd', resp?.user);
-  // }
-
   // handle change of form based on user input
   const handleChange = (event: any) => {
     setFormValue({
@@ -55,13 +48,19 @@ function Form({ car }: any) {
 
   // use API to create booking and send to backend
   const handleSubmit = async () => {
-    console.log(formValue);
     const resp = await createBooking(formValue);
-    console.log(resp);
     if (resp) {
       setShowToastMsg(true);
     }
   };
+
+  if (!isLoaded || !isSignedIn) {
+    return (
+      <div>
+        <h1>Please Login to book car</h1>
+      </div>
+    );
+  }
 
   return (
     <div>

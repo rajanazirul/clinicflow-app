@@ -1,4 +1,3 @@
-import { auth, currentUser } from "@clerk/nextjs";
 import request, { gql } from "graphql-request";
 
 const MASTER_URL =
@@ -80,12 +79,4 @@ export const createBooking = async (formValue: any) => {
 
   const result = await request(MASTER_URL, mutationQuery);
   return result;
-};
-
-export const getUser = async () => {
-  const { userId } = auth();
-  if (userId) {
-    return await currentUser();
-  }
-  return null;
 };
