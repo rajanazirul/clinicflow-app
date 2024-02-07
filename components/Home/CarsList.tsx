@@ -31,8 +31,8 @@ function CarsList(props:any) {
         ))
         :null}
 
-        {/* You can open the modal using ID.showModal() method */}
-
+{/* You can open the modal using ID.showModal() method */}
+{/* This is modal when click button will show user modal to book car */}
 <dialog id="my_modal_4" className="modal">
   <BookingModal car={selectedCar} />
 </dialog>

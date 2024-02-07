@@ -3,9 +3,12 @@ import CarCard from '../Home/CarCard'
 import Form from './Form'
 import { useUser } from '@clerk/nextjs'
 
+
+
 function BookingModal({car}:any) {
 
   return (
+    // add form to book car based on props from parent component
     <form method="dialog" className="modal-box w-11/12 max-w-5xl">
     <div className='border-b-[1px] pb-2 '>
     <h3 className=" text-[30px] font-light text-gray-400">

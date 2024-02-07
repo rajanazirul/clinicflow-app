@@ -23,6 +23,8 @@ export default function Home() {
     setCarsOrgList(result?.carLists);
   }
 
+  // filter car list by brand
+  // use state of carsOrgList to filter
   const filterCarList=(brand:string)=>{
     const filterList=carsOrgList.filter((item:any)=>
     item.carBrand==brand);
@@ -35,6 +37,7 @@ export default function Home() {
     setCarsList(sortedData);
   }
 
+  // This one use to close toast message after 4 second
   useEffect(()=>{
     if(showToastMsg)
     {
@@ -50,6 +53,8 @@ export default function Home() {
       <BookCreatedFlagContext.Provider value={{showToastMsg,setShowToastMsg}}>
         <Hero/>
         <SearchInput/>
+
+        {/* setBrand based on user filter brand using method filterCarlist */}
         <CarsFiltersOption carsList={carsOrgList}
         orderCarList={(value:string)=>orderCarList(value)}
         setBrand={(value:string)=>filterCarList(value)} />
