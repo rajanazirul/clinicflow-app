@@ -1,31 +1,26 @@
-import Image from 'next/image'
-import React from 'react'
+import Image from "next/image";
+import React from "react";
 
 function Hero() {
   return (
-    <div className='grid grid-cols-1 
-    md:grid-cols-2'>
-        <div>
-            
-        <h2 className='text-[40px] md:text-[60px] 
-            font-bold '>Premium Car <span className='text-blue-600'>Rental</span> in Your Area</h2>
-            <h2 className='text-[20px] text-gray-500 pr-20 mt-5'>Book the selected car effortlessly, Pay for driving only,
-                Book the Car Now
-            </h2>
-            <button className='p-2 mt-5 bg-blue-500 text-white
-            px-4 rounded-full 
-            hover:scale-105 transition-all'>Explore Cars</button>
+    <div
+      className="hero min-h-screen"
+      style={{
+        backgroundImage: "url(/hero.png)",
+      }}
+    >
+      <div className="hero-overlay bg-opacity-60"></div>
+      <div className="hero-content text-center text-neutral-content grid md:grid-cols-2 grid-cols-1">
+        <div className="max-w-md">
+          <h1 className="mb-5 text-5xl font-bold">Empowering Clinics and Pharmacies with Full-Stack Technology</h1>
+          <p className="mb-5">
+            Our healthcare platform revolutionizes clinic and pharmacy operations, providing a comprehensive suite of technology solutions.
+          </p>
+          <button className="btn btn-primary">Get Started</button>
         </div>
-        <div>
-        <Image src='/hero.png'
-            alt='hero'
-            width={400}
-            height={500}
-            className='w-full object-cover align-middle'
-            />
-        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
