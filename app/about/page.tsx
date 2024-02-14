@@ -1,8 +1,17 @@
-export default function About() {
+import UserProfile from "@/components/Profile/UserProfile";
+
+function About() {
+  const userInfo = {
+    id: "123",
+    name: "John Doe",
+    email: "john@example.com",
+  };
   return (
     <div>
-      <h1>About</h1>
-      <p>This is the about page</p>
+      About
+      <UserProfile userInfo={userInfo}></UserProfile>
     </div>
   );
 }
+
+export default About;
