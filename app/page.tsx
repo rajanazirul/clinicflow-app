@@ -7,7 +7,7 @@ import ToastMsg from "@/components/ToastMsg";
 import { BookCreatedFlagContext } from "@/context/BookCreatedFlagContext";
 import { getCarsList } from "@/services";
 import { useEffect, useState } from "react";
-import { useAuth } from "@clerk/nextjs";
+import { useAuth, useUser } from "@clerk/nextjs";
 import { createClient } from "@supabase/supabase-js";
 
 const supabaseClient = async (supabaseAccessToken: any) => {
@@ -23,7 +23,9 @@ const supabaseClient = async (supabaseAccessToken: any) => {
 
 const Example = () => {
   const { getToken } = useAuth();
+  const { user, isSignedIn } = useUser();
   const [response, setResponse] = useState('// Click button to execute code');
+  const [userData, setUserData] = useState<any>({});
 
   const fetchToken = async () => {
     setResponse('// Loading...');
@@ -31,6 +33,11 @@ const Example = () => {
       // TODO: Update with your JWT template name
       const token = await getToken({ template: 'supabase' });
       setResponse(token ?? '');
+
+      if(isSignedIn) {
+        setUserData(user);
+        console.log('user', user);
+      }
     } catch (e) {
       setResponse(
         '// There was an error with the request. Please contact support@clerk.dev'
@@ -68,6 +75,7 @@ const Example = () => {
             src="/images/logo-clerk.svg"
           />
           <div>
+            asd {userData.id}
             <h3>{`getToken({ template: 'supabase' })`}</h3>
             <p>Retrieve token from JWT template</p>
           </div>
