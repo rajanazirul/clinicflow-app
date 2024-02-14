@@ -23,15 +23,12 @@ export default function RootLayout({
       <html lang="en">
         <body className={inter.className}>
           <NavBar />
-          {children}
-
-          {/* <SignedIn>
-          <NavBar/>
-         {children}
-        </SignedIn>
-        <SignedOut>
-          <SignIn/>
-        </SignedOut> */}
+          <SignedIn>{children}</SignedIn>
+          <SignedOut>
+            <div className="flex justify-center mt-10">
+              <SignIn />
+            </div>
+          </SignedOut>
         </body>
       </html>
     </ClerkProvider>

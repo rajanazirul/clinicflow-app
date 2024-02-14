@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import {
-    UserButton
+    UserButton, SignInButton
   } from "@clerk/nextjs";
 function NavBar() {
   return (
@@ -24,6 +24,7 @@ function NavBar() {
             px-3 cursor-pointer
             p-2 rounded-full hover:text-white'>Contact Us</h2>
         </div>
+        <SignInButton/>
         <UserButton/>
     </div>
   )
