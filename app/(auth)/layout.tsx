@@ -1,9 +1,15 @@
-import React from 'react'
+import NavBar from "@/components/NavBar";
+import React from "react";
 
-function Layout({children}: {children: React.ReactNode}) {
+function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <main className='flex-center min-h-screen w-full bg-purple-100'> {children} </main>
-  )
+    <main className="auth">
+      <NavBar />
+      <div className="flex justify-center min-h-screen bg-purple-100 pt-20">
+        <div className="wrapper"> {children}</div>
+      </div>
+    </main>
+  );
 }
 
-export default Layout
+export default Layout;
