@@ -3,18 +3,20 @@ import createMiddleware from 'next-intl/middleware';
 import {NextRequest} from 'next/server';
 
 const locales = ['en', 'my'];
-const publicPages = ['/', '/login'];
-
-const auth = authMiddleware({
-  publicRoutes: ["/", "/about"],
-});
+const publicPages = ['/', '/sign-in', `/sign-up`, `/about`];
 
 const intl = createMiddleware({
   locales: ['en', 'my'],
   defaultLocale: 'my'
 });
 
-// export default compose([auth, intl]);
+const auth = authMiddleware({
+  beforeAuth: (req) => {
+    return intl(req);
+  },
+  publicRoutes: ["/", "/en", "/:locale/sign-in", "/:locale/sign-up"],
+});
+
 export default function middleware(req: NextRequest) {
   const publicPathnameRegex = RegExp(
     `^(/(${locales.join('|')}))?(${publicPages
