@@ -1,10 +1,7 @@
-import { ClerkProvider, SignIn } from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
-import { SignedIn } from "@clerk/nextjs";
-import { SignedOut } from "@clerk/nextjs";
-import NavBar from "@/components/NavBar";
 
 const inter = Outfit({ subsets: ["latin"] });
 
@@ -15,12 +12,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: {locale}
+
 }: {
   children: React.ReactNode;
+  params: {locale: string};
 }) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang={locale}>
         <body className={inter.className}>{children}</body>
       </html>
     </ClerkProvider>
