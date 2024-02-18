@@ -48,7 +48,7 @@ export default function ClinicSection() {
     }
   }, [showToastMsg]);
   return (
-    <div className="">
+    <div>
       <BookCreatedFlagContext.Provider
         value={{ showToastMsg, setShowToastMsg }}
       >
