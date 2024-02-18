@@ -19,7 +19,7 @@ function NavBar() {
         <Image src="/logo.png" alt="logo" width={100} height={100} />
       </Link>
 
-      <nav className="header-navbar">
+      <nav>
         <SignedIn>
           <div className="flex space-x-4">
             {navLinks.slice(0, 6).map((link) => {

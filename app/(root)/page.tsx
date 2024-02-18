@@ -7,12 +7,12 @@ import ToastMsg from "@/components/ToastMsg";
 import { BookCreatedFlagContext } from "@/context/BookCreatedFlagContext";
 import { getCarsList } from "@/services";
 import { useEffect, useState } from "react";
-import Example from "@/components/Profile/Example";
 
 export default function Home() {
   const [carsList, setCarsList] = useState<any>([]);
   const [carsOrgList, setCarsOrgList] = useState<any>([]);
   const [showToastMsg, setShowToastMsg] = useState<boolean>(false);
+
   useEffect(() => {
     getCarList_();
   }, []);
