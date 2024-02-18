@@ -48,11 +48,9 @@ function NavBar() {
             })}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">
-          <Link href="/">
-            <Image src="/logo.png" alt="logo" width={100} height={100} />
-          </Link>
-        </a>
+        <Link className="btn btn-ghost text-xl" href="/">
+          <Image src="/logo.png" alt="logo" width={100} height={100} />
+        </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
@@ -77,9 +75,9 @@ function NavBar() {
           </div>
         </SignedIn>
         <SignedOut>
-          <a className="btn">
-            <Link href="/sign-in">Login</Link>
-          </a>
+          <Link className="btn" href="/sign-in">
+            Login
+          </Link>
         </SignedOut>
       </div>
     </div>
