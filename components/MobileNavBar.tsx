@@ -22,9 +22,7 @@ export default function MobileNavBar() {
         <div className="flex justify-end flex-1 px-2">
           <div className="flex items-stretch">
             <SignedOut>
-              <a className="btn btn-ghost rounded-btn">
-                <Link href="/sign-in">Login</Link>
-              </a>
+                <Link className="btn btn-ghost rounded-btn" href="/sign-in">Login</Link>
             </SignedOut>
 
             <SignedIn>
@@ -45,11 +43,12 @@ export default function MobileNavBar() {
                 tabIndex={0}
                 className="menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4"
               >
-                {navLinks.slice(0, 6).map((link) => {
+                {navLinks.slice(0, 6).map((link, index) => {
                   const isActive = link.route === pathname;
 
                   return (
                     <h2
+                      key={index}
                       className={`
                 hover:bg-blue-500
                 px-3 cursor-pointer

@@ -22,11 +22,12 @@ function NavBar() {
       <nav>
         <SignedIn>
           <div className="flex space-x-4">
-            {navLinks.slice(0, 6).map((link) => {
+            {navLinks.slice(0, 2).map((link, index) => {
               const isActive = link.route === pathname;
 
               return (
                 <h2
+                  key={index}
                   className={`
                 hover:bg-blue-500
                 px-3 cursor-pointer
@@ -47,11 +48,12 @@ function NavBar() {
 
         <SignedOut>
           <div className="flex space-x-4">
-            {navLinks.slice(0, 6).map((link) => {
+            {navLinks.slice(0, 6).map((link, index) => {
               const isActive = link.route === pathname;
 
               return (
                 <h2
+                  key={index}
                   className={`
                 hover:bg-blue-500
                 px-3 cursor-pointer
