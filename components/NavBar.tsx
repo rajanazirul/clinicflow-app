@@ -6,7 +6,6 @@ import { UserButton, SignedOut, SignedIn } from "@clerk/nextjs";
 import Link from "next/link";
 import { navLinks } from "@/constants";
 import { usePathname } from "next/navigation";
-import LocalSwitcher from "./LocalSwitcher";
 
 function NavBar() {
   const pathname = usePathname();
@@ -80,10 +79,6 @@ function NavBar() {
             Login
           </Link>
         </SignedOut>
-
-        <div className="mx-2">
-          <LocalSwitcher />
-        </div>
       </div>
     </div>
   );
