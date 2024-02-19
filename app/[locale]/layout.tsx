@@ -18,10 +18,10 @@ export default function RootLayout({
   params: { locale: string };
 }) {
   return (
-    <html lang={locale}>
-      <ClerkProvider>
+    <ClerkProvider>
+      <html lang={locale}>
         <body className={inter.className}>{children}</body>
-      </ClerkProvider>
-    </html>
+      </html>
+    </ClerkProvider>
   );
 }

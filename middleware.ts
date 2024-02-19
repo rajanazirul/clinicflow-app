@@ -1,37 +1,20 @@
 import { authMiddleware } from "@clerk/nextjs";
 import createMiddleware from 'next-intl/middleware';
-import {NextRequest} from 'next/server';
 
-const locales = ['en', 'my'];
-const publicPages = ['/', '/sign-in', `/sign-up`, `/about`];
-
-const intl = createMiddleware({
+const intlMiddleware = createMiddleware({
   locales: ['en', 'my'],
-  defaultLocale: 'my'
+  defaultLocale: 'en'
 });
-
-const auth = authMiddleware({
-  beforeAuth: (req) => {
-    return intl(req);
-  },
-  publicRoutes: ["/", "/en", "/:locale/sign-in", "/:locale/sign-up"],
-});
-
-export default function middleware(req: NextRequest) {
-  const publicPathnameRegex = RegExp(
-    `^(/(${locales.join('|')}))?(${publicPages
-      .flatMap((p) => (p === '/' ? ['', '/'] : p))
-      .join('|')})/?$`,
-    'i'
-  );
-  const isPublicPage = publicPathnameRegex.test(req.nextUrl.pathname);
  
-  if (isPublicPage) {
-    return intl(req);
-  } else {
-    return (auth as any)(req);
-  }
-}
+export default authMiddleware({
+  beforeAuth(request) {
+    return intlMiddleware(request);
+  },
+ 
+  // Ensure that locale-specific sign in pages are public
+  publicRoutes: ['/:locale', '/:locale/sign-in'],
+  // debug: true,
+});
 
 export const config = {
   matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
