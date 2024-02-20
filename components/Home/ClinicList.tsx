@@ -30,7 +30,7 @@ function ClinicList(props: any) {
             <ClinicCard clinic={clinic} />
           </div>
         ))}
-      {isLoaded ? [1, 2, 3, 4, 5].map((item) => <CarCardSkelton />) : null}
+      {isLoaded ? [1, 2, 3, 4, 5].map((item) => <CarCardSkelton key={item} />) : null}
 
       {/* You can open the modal using ID.showModal() method */}
       {/* This is modal when click button will show user modal to book car */}
