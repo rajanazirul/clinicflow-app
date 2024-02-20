@@ -52,7 +52,6 @@ export default function ClinicSection() {
       <BookCreatedFlagContext.Provider
         value={{ showToastMsg, setShowToastMsg }}
       >
-        <Hero />
         <SearchInput />
 
         {/* setBrand based on user filter brand using method filterCarlist */}

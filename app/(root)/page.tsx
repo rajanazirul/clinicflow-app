@@ -1,3 +1,4 @@
+import ClinicSection from "@/components/Home/ClinicSection";
 import FeatureList from "@/components/Home/FeatureList";
 import FeatureSection from "@/components/Home/FeatureSection";
 import Features from "@/components/Home/Features";
@@ -8,6 +9,7 @@ export default function Home() {
     <div>
       <Hero />
       <FeatureList />
+      <ClinicSection />
       <Features />
       <FeatureSection title="Unveiling Our Potential" leftText={true} showHeading={true} />
     </div>

@@ -57,7 +57,7 @@ function Form({ car }: any) {
   if (!isLoaded || !isSignedIn) {
     return (
       <div>
-        <h1>Please Login to book car</h1>
+        <h1>Please Login to book an appointment</h1>
       </div>
     );
   }
