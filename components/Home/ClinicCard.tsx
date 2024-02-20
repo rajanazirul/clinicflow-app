@@ -3,33 +3,33 @@ import MapPinIcon from "@heroicons/react/24/outline/MapPinIcon";
 import PhoneIcon from "@heroicons/react/24/outline/PhoneIcon";
 
 function ClinicCard(props: any) {
-  //   const [clinic, setClinic] = useState<any>();
+  const [clinic, setClinic] = useState<any>();
 
-  const clinic = {
-    address: {
-      town: "Kota Kinabalu",
-      state: "Sabah",
-      numbers: "1-G-7",
-      poscode: "88000",
-      streets: "Lorong Api - Api 1, Api-api Centre",
-    },
-    createdAt: "2024-02-20T09:06:42.783523+00:00",
-    geo: {
-      latitude: 5.976553720234743,
-      longitude: 116.07102723617588,
-    },
-    id: "clsu55qt20lbn0c18sbnxm3g0",
-    name: "Family Care Clinic Api Api",
-    publishedAt: null,
-    telephone: "0128514847",
-    updatedAt: "2024-02-20T09:09:40.295106+00:00",
-  };
+  // const clinic = {
+  //   address: {
+  //     town: "Kota Kinabalu",
+  //     state: "Sabah",
+  //     numbers: "1-G-7",
+  //     poscode: "88000",
+  //     streets: "Lorong Api - Api 1, Api-api Centre",
+  //   },
+  //   createdAt: "2024-02-20T09:06:42.783523+00:00",
+  //   geo: {
+  //     latitude: 5.976553720234743,
+  //     longitude: 116.07102723617588,
+  //   },
+  //   id: "clsu55qt20lbn0c18sbnxm3g0",
+  //   name: "Family Care Clinic Api Api",
+  //   publishedAt: null,
+  //   telephone: "0128514847",
+  //   updatedAt: "2024-02-20T09:09:40.295106+00:00",
+  // };
 
-  //   useEffect(() => {
-  //     if (props.clinic) {
-  //       setClinic(props.clinic);
-  //     }
-  //   }, [props.clinic]);
+  useEffect(() => {
+    if (props.clinic) {
+      setClinic(props.clinic);
+    }
+  }, [props.clinic]);
   return (
     clinic && (
       <div
@@ -40,10 +40,7 @@ border-blue-500 "
       >
         <div className="card bg-base-100 shadow-xl">
           <figure>
-            <img
-              src="https://media.graphassets.com/r5Kv4g65TlKNU5jlFNg3"
-              alt="Shoes"
-            />
+            <img src={clinic.image[0].url} alt="Shoes" />
           </figure>
 
           <div className="card-body">
