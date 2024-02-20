@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react'
-import CarCard from './CarCard'
+import ClinicCard from './ClinicCard'
 import CarCardSkelton from './CarCardSkelton'
 import BookingModal from '../CarBooking/BookingModal'
 
@@ -22,7 +22,7 @@ function CarsList(props:any) {
             <div key={index} 
             onClick={()=>{(window as any).my_modal_4.showModal();
               setSelectedCar(car)}}>
-                <CarCard car={car} />
+                <ClinicCard car={car} />
             </div>
         ))}
         {isLoaded?

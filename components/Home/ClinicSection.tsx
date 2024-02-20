@@ -1,42 +1,31 @@
 "use client";
-import CarsFiltersOption from "@/components/Home/CarsFiltersOption";
-import CarsList from "@/components/Home/CarsList";
-import Hero from "@/components/Home/Hero";
 import SearchInput from "@/components/Home/SearchInput";
 import ToastMsg from "@/components/ToastMsg";
 import { BookCreatedFlagContext } from "@/context/BookCreatedFlagContext";
-import { getCarsList } from "@/services";
+import { getClinicList } from "@/services";
 import { useEffect, useState } from "react";
+import ClinicFilterOption from "./ClinicFilterOption";
+import ClinicList from "./ClinicList";
 
 export default function ClinicSection() {
-
-  const [carsList, setCarsList] = useState<any>([]);
-  const [carsOrgList, setCarsOrgList] = useState<any>([]);
+  const [clinicList, setClinicList] = useState<any>([]);
+  const [clinicTownList, setClinicTownList] = useState<any>([]);
   const [showToastMsg, setShowToastMsg] = useState<boolean>(false);
 
   useEffect(() => {
-    getCarList_();
+    getClinicList_();
   }, []);
-  const getCarList_ = async () => {
-    const result: any = await getCarsList();
-    setCarsList(result?.carLists);
-    setCarsOrgList(result?.carLists);
+
+  const getClinicList_ = async () => {
+    const result: any = await getClinicList();
+    setClinicList(result?.clinics);
+    setClinicTownList(result?.clinics?.address?.town);
   };
 
-  // filter car list by brand
-  // use state of carsOrgList to filter
-  const filterCarList = (brand: string) => {
-    const filterList = carsOrgList.filter(
-      (item: any) => item.carBrand == brand
-    );
-    setCarsList(filterList);
-  };
-
-  const orderCarList = (order: any) => {
-    const sortedData = [...carsOrgList].sort((a, b) =>
-      order == -1 ? a.price - b.price : b.price - a.price
-    );
-    setCarsList(sortedData);
+  const filterClinicList = (town: string) => {
+    console.log("town", clinicTownList);
+    const filterList = clinicTownList.filter((item: any) => item.town == town);
+    setClinicList(filterList);
   };
 
   // This one use to close toast message after 4 second
@@ -54,17 +43,17 @@ export default function ClinicSection() {
       >
         <SearchInput />
 
-        {/* setBrand based on user filter brand using method filterCarlist */}
-        <CarsFiltersOption
-          carsList={carsOrgList}
-          orderCarList={(value: string) => orderCarList(value)}
-          setBrand={(value: string) => filterCarList(value)}
-        />
-        <CarsList carsList={carsList} />
+        {/* <ClinicFilterOption
+          clinicList={clinicTownList}
+          setTown={(value: string) => filterClinicList(value)}
+        /> */}
+        <div>
+          <ClinicList clinicList={clinicList} />
+        </div>
         {showToastMsg ? (
           <ToastMsg msg={"Booking Created Successfully!"} />
         ) : null}
       </BookCreatedFlagContext.Provider>
     </div>
-  )
+  );
 }

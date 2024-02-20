@@ -17,7 +17,7 @@ function BookingModal({car}:any) {
             <CarCard car={car} />
         </div>
         <div>
-           <Form car={car} />
+           {/* <Form car={car} /> */}
         </div>
     </div>
    
