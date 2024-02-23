@@ -19,11 +19,9 @@ export default function ClinicSection() {
   const getClinicList_ = async () => {
     const result: any = await getClinicList();
     setClinicList(result?.clinics);
-    setClinicTownList(result?.clinics?.address?.town);
   };
 
   const filterClinicList = (town: string) => {
-    console.log("town", clinicTownList);
     const filterList = clinicTownList.filter((item: any) => item.town == town);
     setClinicList(filterList);
   };

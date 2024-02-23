@@ -23,7 +23,7 @@ const generationStepData = [
   {
     icon: <BuildingOfficeIcon className="w-20 h-20 inline-block mr-2" />,
     description:
-      "Simplify Clinic and Pharmacy Operations with Our Comprehensive Technology",
+      "Simplify Clinic and Pharmacy Operations with management system",
     subdescription:
       "Our technology solutions simplifies operations for clinics and pharmacies, making them more efficient and effective.",
   },
