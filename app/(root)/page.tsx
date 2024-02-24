@@ -11,7 +11,7 @@ export default function Home() {
       <FeatureList />
       <ClinicSection />
       <Features />
-      <FeatureSection title="Unveiling Our Potential" leftText={true} showHeading={true} />
+      <FeatureSection showHeading={true} />
     </div>
   );
 }

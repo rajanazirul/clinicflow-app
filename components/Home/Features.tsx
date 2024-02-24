@@ -39,13 +39,18 @@ export default function Features() {
         <div className="grid mt-12 md:grid-cols-3 grid-cols-1 gap-8">
           {featuresData.map((i, k) => {
             return (
-              <div
-                key={k}
-                className="card w-full bg-base-100 shadow-xl hover:shadow-2xl"
-              >
-                <div className="card-body mt-4 items-center text-center">
+              <div key={k} className="card w-76 bg-base-100 shadow-xl">
+                <figure className="px-10 pt-10">
+                  <img
+                    src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+                    alt="Shoes"
+                    className="rounded-xl"
+                  />
+                </figure>
+                <div className="card-body items-center text-center">
                   <h2 className="card-title">{i.title}</h2>
                   <p>{i.description}</p>
+                 
                 </div>
               </div>
             );
