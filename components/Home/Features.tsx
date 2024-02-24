@@ -1,41 +1,39 @@
 const featuresData = [
   {
-    title: "Expertise",
+    title: "Online Appointment Booking",
     description:
-      "We have team of experienced software developers who are skilled in various programming languages, software development methodologies, and tools.",
+      "Streamlines scheduling with real-time availability, allowing patients to book and confirm appointments effortlessly.",
   },
   {
-    title: "Custom software",
+    title: "Patient Records Management",
     description:
-      "We develop custom software solutions based on the specific needs of its clients.",
+      "Secure online access to health records, enabling comprehensive health management and care coordination.",
   },
   {
-    title: "Maintenance & Support:",
+    title: "Clinics Data Aggregator",
     description:
-      "We offer ongoing application maintenance and support services to its clients. This might include bug fixes, software updates, and technical support.",
+      "Offers insights into local clinics, helping patients make informed choices based on services, specialties, and reviews.",
   },
   {
-    title: "Quality assurance and testing",
+    title: "Discharge Summary Access",
     description:
-      "A team of QA professionals who are responsible for ensuring that the software developed meets the highest quality standards. ",
+      "Provides secure access to discharge summaries online, aiding in post-care understanding and follow-up treatment.",
   },
   {
-    title: "Agile development methodologies",
+    title: "Digital Payment Solutions",
     description:
-      "We use Agile development methodologies such as Scrum or Kanban to manage their software development projects. This allows for greater collaboration and flexibility throughout the development process.",
+      "Facilitates smooth and secure transactions for healthcare services, enhancing convenience for patients and providers.",
   },
   {
-    title: "Data security and privacy",
+    title: "Inventory Management",
     description:
-      "A strong focus on data security and privacy, and should implement appropriate measures to protect client data and ensure compliance with relevant regulations such as GDPR or CCPA.",
+      "Efficiently manages clinic and pharmacy inventory, ensuring optimal stock levels, reducing waste, and improving procurement processes.",
   },
 ];
 
-import React from "react";
-
 export default function Features() {
   return (
-    <div className="grid place-items-center w-full bg-base-200">
+    <div className="container grid place-items-center w-full bg-base-200">
       <div className="max-w-5xl py-24 content-center justify-center">
         <h1 className="text-4xl  text-center font-bold">Our Services</h1>
         <div className="grid mt-12 md:grid-cols-3 grid-cols-1 gap-8">

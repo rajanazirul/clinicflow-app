@@ -75,7 +75,7 @@ function NavBar() {
           </div>
         </SignedIn>
         <SignedOut>
-          <Link className="btn" href="/sign-in">
+          <Link className="btn mx-4" href="/sign-in">
             Login
           </Link>
         </SignedOut>
