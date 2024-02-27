@@ -1,5 +1,5 @@
 {
-  "name": "car-rental-youtube",
+  "name": "clinicflow-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^4.29.6",
+    "@heroicons/react": "^2.1.1",
+    "@supabase/supabase-js": "^2.39.6",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
@@ -21,7 +23,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
-    "tailwindcss": "3.3.3",
+    "tailwindcss": "^3.4.1",
     "typescript": "5.1.6"
   },
   "devDependencies": {

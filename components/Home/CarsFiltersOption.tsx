@@ -21,8 +21,8 @@ function CarsFiltersOption({carsList,setBrand,orderCarList}:any) {
   return (
     <div className='mt-10 flex items-center justify-between'>
         <div>
-            <h2 className='text-[30px] font-bold'>Cars Catalog</h2>
-            <h2>Explore our cars you might likes</h2>
+            <h2 className='text-[30px] font-bold'>Clinics</h2>
+            <h2>Discover a wide range of clinic franchise, their service and locations.</h2>
         </div>
         <div className='flex gap-5'>
             <select className="select select-bordered 

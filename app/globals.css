@@ -1,4 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-wrap {
+  margin: 10px;
+  transform: perspective(800px);
+  transform-style: preserve-3d;
+  cursor: pointer;
+  /* background-color: #fff; */
+}
+
+.card-wrap:hover .card-info {
+  transform: translateY(0);
+}
+
+.card-wrap:hover .card-info p {
+  opacity: 1;
+}
+
+.card-wrap:hover .card-info,
+.card-wrap:hover .card-info p {
+  transition: 0.6s;
+}
+
+.card-wrap:hover .card-info:after {
+  transition: 5s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-wrap:hover .card-bg {
+  transition: 0.6s, opacity 5s;
+  opacity: 0.8;
+}
+
+.card-wrap:hover .card {
+  transition: 0.6s, box-shadow 2s;
+  box-shadow: 0 0 40px 5px rgba(255, 255, 255, 0.2), 0 0 0 1px rgba(255, 255, 255, 1), 0 30px 60px 0 rgba(0, 0, 0, 0.66), inset 0 0 0 5px #333, inset 0 0 0 6px #fff;
+}
