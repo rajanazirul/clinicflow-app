@@ -8,10 +8,6 @@ const featuresData = [
     image: "/inventory-item.png",
   },
   {
-    title: "Inventory Report",
-    image: "/inventory-report.png",
-  },
-  {
     title: "Appointment Scheduling",
     image: "/appoinment-scheduling.png",
   },
@@ -23,24 +19,25 @@ export default function FeatureSection({
   showHeading: boolean;
 }) {
   return (
-    <div>
+    <div className="container grid place-items-center w-full bg-base-200">
       {showHeading && (
         <h2 className="text-3xl mt-12 text-center font-bold">
-          Clinic Management System
+          Our Clinic Management System
         </h2>
       )}
-      <div className={`grid place-items-center w-full`}>
-        <div className="max-w-6xl px-4 py-8 content-center justify-center">
+      <div>
+        <div className="carousel w-full my-10">
           {featuresData.map((i, k) => {
             return (
-              <div className="card-wrap">
-                <div className="card w-140 bg-base-100 shadow-xl">
-                  <div className="card-body">
-                    <h2 className="card-title">{i.title}</h2>
-                  </div>
-                  <figure>
-                    <img src={i.image} alt={i.title} />
-                  </figure>
+              <div id={"slide" + k} className="carousel-item relative w-full">
+                <img src={i.image} alt={i.title} />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a href={"#slide" + (k - 1)} className="btn btn-circle">
+                    ❮
+                  </a>
+                  <a href={"#slide" + (k + 1)} className="btn btn-circle">
+                    ❯
+                  </a>
                 </div>
               </div>
             );
