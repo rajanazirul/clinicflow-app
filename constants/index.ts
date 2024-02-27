@@ -9,6 +9,6 @@ export const navLinks = [
     },
     {
       label: "Contact Us",
-      route: "/about",
+      route: "/contact-us",
     },
   ];

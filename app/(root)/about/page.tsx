@@ -1,17 +1,10 @@
-import UserProfile from "@/components/Profile/UserProfile";
+import AboutUs from '@/components/About/AboutUs'
+import React from 'react'
 
-function About() {
-  const userInfo = {
-    id: "123",
-    name: "John Doe",
-    email: "john@example.com",
-  };
+export default function About() {
   return (
     <div>
-      About
-      <UserProfile userInfo={userInfo}></UserProfile>
+      <AboutUs />
     </div>
-  );
+  )
 }
-
-export default About;

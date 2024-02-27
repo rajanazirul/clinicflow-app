@@ -7,7 +7,7 @@ const generationStepData = [
   {
     icon: <BoltIcon className="w-20 h-20 inline-block mr-2" />,
     description:
-      "Streamline Operations for Clinics and Pharmacies with Our Platform",
+      "Streamline Operations for Marketing and Technology Utilization",
     subdescription:
       "Our Healthcare platform empowers clinics and pharmacies by providing full-stack technology that increase earnings and ease operations.",
   },
