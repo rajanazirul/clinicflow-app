@@ -16,7 +16,7 @@ function Hero() {
           <p className="mb-5">
             Our healthcare platform revolutionizes clinic and pharmacy operations, providing a comprehensive suite of technology solutions.
           </p>
-          <button className="btn btn-primary">Get Started</button>
+          <button className="btn bg-primary-50">Get Started</button>
         </div>
       </div>
     </div>

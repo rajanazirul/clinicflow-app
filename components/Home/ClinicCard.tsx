@@ -18,7 +18,7 @@ function ClinicCard(props: ClinicCardProps) {
 
   return clinic ? (
     <div
-      className="group bg-gray-50 p-2 sm:p-5 rounded-3xl m-1 sm:m-5
+      className="group p-2 sm:p-5 rounded-3xl m-1 sm:m-5
 hover:bg-white 
 hover:border-[1px] cursor-pointer duration-50
 border-blue-500 "
