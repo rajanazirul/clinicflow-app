@@ -19,7 +19,7 @@ export default function FeatureSection({
   showHeading: boolean;
 }) {
   return (
-    <div>
+    <div className="max-container padding-container relative w-full flex">
       <div className="grid place-items-center w-9/12 bg-base-200">
         {showHeading && (
           <h2 className="text-3xl mt-12 text-center font-bold">
