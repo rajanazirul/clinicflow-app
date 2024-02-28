@@ -18,14 +18,14 @@ function ClinicCard(props: ClinicCardProps) {
 
   return clinic ? (
     <div
-      className="group bg-gray-50 p-2 sm:p-5 rounded-3xl m-1 sm:m-5
+      className="group p-2 sm:p-5 rounded-3xl m-1 sm:m-5
 hover:bg-white 
 hover:border-[1px] cursor-pointer duration-50
 border-blue-500 "
     >
       <div className="card bg-base-100 shadow-xl">
         <figure>
-          <img src={clinic.image[0].url} alt="Shoes" />
+          <img src={clinic.image[0].url} alt={clinic.name} />
         </figure>
 
         <div className="card-body">
@@ -52,7 +52,9 @@ border-blue-500 "
     p-2 rounded-lg text-white w-full px-5 justify-between"
         onClick={() =>
           window.open(
-            "https://wa.me/60174220665?text=I%20want%20to%20make%20an%20appointment",
+            "https://wa.me/" +
+              clinic.telephone +
+              "?text=I%20want%20to%20make%20an%20appointment",
             "_blank"
           )
         }
