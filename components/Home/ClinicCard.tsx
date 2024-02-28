@@ -52,7 +52,9 @@ border-blue-500 "
     p-2 rounded-lg text-white w-full px-5 justify-between"
         onClick={() =>
           window.open(
-            "https://wa.me/60174220665?text=I%20want%20to%20make%20an%20appointment",
+            "https://wa.me/" +
+              clinic.telephone +
+              "?text=I%20want%20to%20make%20an%20appointment",
             "_blank"
           )
         }
