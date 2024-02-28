@@ -25,7 +25,7 @@ border-blue-500 "
     >
       <div className="card bg-base-100 shadow-xl">
         <figure>
-          <img src={clinic.image[0].url} alt="Shoes" />
+          <img src={clinic.image[0].url} alt={clinic.name} />
         </figure>
 
         <div className="card-body">
