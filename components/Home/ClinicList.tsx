@@ -13,7 +13,7 @@ function ClinicList(props: ClinicListProps) {
   return (
     <div className="max-container padding-container relative w-full flex justify-end">
       <div
-        className="grid grid-cols-2 
+        className="grid grid-cols-1 
     md:grid-cols-3
     lg:grid-cols-4"
       >
