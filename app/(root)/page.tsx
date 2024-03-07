@@ -12,8 +12,6 @@ export default function Home() {
       <FeatureList />
       <ClinicSection />
       <Features />
-      <FeatureCarousell />
-      <FeaturesMulti /> 
     </div>
   );
 }
