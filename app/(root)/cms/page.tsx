@@ -1,6 +1,8 @@
 import { FcBullish } from "react-icons/fc";
 import { FcAcceptDatabase } from "react-icons/fc";
 import { FaChevronRight } from "react-icons/fa";
+import Image from "next/image";
+
 export default function Cms() {
   return (
     <div>
@@ -11,7 +13,7 @@ export default function Cms() {
           <div className="hero-content text-center relative">
             <div className="max-w-md">
               <h1 className="text-5xl font-bold">
-                Tranforming Clinic Technology
+                Transforming Clinic Technology
               </h1>
               <p className="py-6">
                 Discover our cutting-edge technology solutions designed to
@@ -24,11 +26,9 @@ export default function Cms() {
       </div>
 
       {/* Second */}
-      <div className="grid sm:grid-cols-2 gap-5 mx-7 my-7 text-center relative">
+      <div className="grid sm:grid-cols-2 gap-10 mx-7 my-7 text-center relative">
         <div>
-          <div className="text-5xl font-bold my-5">
-            Why Join Us?
-          </div>
+          <div className="text-5xl font-bold my-5">Why Join Us?</div>
           <div className="my-4">
             Our platform is designed to increase your clinic revenue by
             utilising advanced technology such as Search Engine Optimization for
@@ -64,8 +64,16 @@ export default function Cms() {
             </button>
           </div>
         </div>
-        <div>
-          <div>Image</div>
+        <div className="rounded-box">
+          <div className="card">
+            <figure>
+              <img
+                src="/cms-banner.png"
+                alt="cms"
+              />
+            </figure>
+            
+          </div>
         </div>
       </div>
 

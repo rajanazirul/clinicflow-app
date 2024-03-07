@@ -1,7 +1,8 @@
 import ClinicSection from "@/components/Home/ClinicSection";
 import FeatureList from "@/components/Home/FeatureList";
-import FeatureSection from "@/components/Home/FeatureSection";
+import FeatureCarousell from "@/components/Home/FeatureCarousell";
 import Features from "@/components/Home/Features";
+import FeaturesMulti from "@/components/Home/FeaturesMulti";
 import Hero from "@/components/Home/Hero";
 
 export default function Home() {
@@ -11,7 +12,8 @@ export default function Home() {
       <FeatureList />
       <ClinicSection />
       <Features />
-      <FeatureSection />
+      <FeatureCarousell />
+      <FeaturesMulti /> 
     </div>
   );
 }
