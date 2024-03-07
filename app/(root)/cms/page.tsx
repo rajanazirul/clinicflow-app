@@ -26,7 +26,7 @@ export default function Cms() {
       </div>
 
       {/* Second */}
-      <div className="grid sm:grid-cols-2 gap-10 mx-7 my-7 text-center relative">
+      <div className="grid sm:grid-cols-2 gap-10 mx-20 my-20 text-center relative">
         <div>
           <div className="text-5xl font-bold my-5">Why Join Us?</div>
           <div className="my-4">
@@ -64,35 +64,33 @@ export default function Cms() {
             </button>
           </div>
         </div>
-        <div className="rounded-box">
-          <div className="card">
-            <figure>
-              <img
-                src="/cms-banner.png"
-                alt="cms"
-              />
-            </figure>
-            
-          </div>
+        <div>
+          <figure>
+            <img src="/cms-banner.png" alt="cms" />
+          </figure>
         </div>
       </div>
 
       {/* Third */}
-      <div className="grid sm:grid-cols-2 gap-4">
-        <div>
-          <div>Head</div>
-          <div>Description</div>
+      <div className="grid sm:grid-cols-2 gap-4 mx-20 my-20 text-center">
+        <div className="card">
+          <figure>
+            <img src="/cms-banner-2.png" alt="cms" />
+          </figure>
         </div>
-        <div>Image</div>
-      </div>
-
-      {/* Fourth */}
-      <div className="grid sm:grid-cols-2 gap-4">
         <div>
-          <div>Head</div>
-          <div>Description</div>
+          <div className="flex flex-col justify-center items-center h-full">
+            <div className="text-5xl font-bold my-5">
+              Streamline Your Marketing Strategy
+            </div>
+            <div className="my-4">
+              Utilise our resource to streamline your marketing strategy. With
+              help from our expert, you can create a marketing strategy that is
+              tailored to your clinic needs. While focus on your patient care,
+              we will focus on your clinic growth.
+            </div>
+          </div>
         </div>
-        <div>Image</div>
       </div>
     </div>
   );
