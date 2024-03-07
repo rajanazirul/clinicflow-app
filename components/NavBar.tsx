@@ -46,6 +46,11 @@ function NavBar() {
                 </li>
               );
             })}
+            <SignedIn>
+              <li>
+                <Link href="/user">Profile</Link>
+              </li>
+            </SignedIn>
           </ul>
         </div>
         <Link className="btn btn-ghost text-xl" href="/">
@@ -71,6 +76,11 @@ function NavBar() {
       <div className="navbar-end">
         <SignedIn>
           <div className="flex space-x-4">
+            <div className="sm:block hidden">
+              <Link href="/user" className="btn mx-2">
+                Profile
+              </Link>
+            </div>
             <UserButton afterSignOutUrl="/" />
           </div>
         </SignedIn>

@@ -64,10 +64,10 @@ export default function Example() {
         <button onClick={fetchToken} type="button">
           <div>
             Welcome {userData.id} {user?.fullName ?? "no user"}
-            <h3>{`getToken({ template: 'supabase' })`}</h3>
-            <p>Retrieve token from JWT template</p>
+            {/* <h3>{`getToken({ template: 'supabase' })`}</h3> */}
+            {/* <p>Retrieve token from JWT template</p> */}
           </div>
-          <svg
+          {/* <svg
             className="icon-arrow"
             width="24"
             height="24"
@@ -81,10 +81,10 @@ export default function Example() {
               strokeLinecap="round"
               strokeLinejoin="round"
             />
-          </svg>
+          </svg> */}
         </button>
       </div>
-      <div className="card">
+      {/* <div className="card">
         <button onClick={fetchData} type="button">
           <div>
             <h3>supabase.from('User').select()</h3>
@@ -106,10 +106,10 @@ export default function Example() {
             />
           </svg>
         </button>
-      </div>
-      <pre>
+      </div> */}
+      {/* <pre>
         <code>{response}</code>
-      </pre>
+      </pre> */}
     </div>
   );
 }
