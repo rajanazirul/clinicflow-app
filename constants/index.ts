@@ -3,6 +3,10 @@ export const navLinks = [
       label: "Home",
       route: "/",
     },
+    {
+      label: "For Clinics",
+      route: "/cms",
+    },
     // {
     //   label: "About Us",
     //   route: "/about",
