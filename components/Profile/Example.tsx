@@ -57,12 +57,13 @@ export default function Example() {
     }
   };
 
+
   return (
     <div className="example">
       <div className="card">
         <button onClick={fetchToken} type="button">
           <div>
-            asd {userData.id}
+            Welcome {userData.id} {user?.fullName ?? "no user"}
             <h3>{`getToken({ template: 'supabase' })`}</h3>
             <p>Retrieve token from JWT template</p>
           </div>
