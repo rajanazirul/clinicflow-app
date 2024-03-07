@@ -26,7 +26,7 @@ export default function Cms() {
       </div>
 
       {/* Second */}
-      <div className="grid sm:grid-cols-2 gap-10 mx-20 my-20 text-center relative">
+      <div className="grid sm:grid-cols-2 gap-10 sm:mx-20 sm:my-20 mx-5 my-5 text-center relative">
         <div>
           <div className="text-5xl font-bold my-5">Why Join Us?</div>
           <div className="my-4">
@@ -36,7 +36,7 @@ export default function Cms() {
             CMS, you can efficiently manage patient records, appointments,
             prescription and more.
           </div>
-          <div className="grid grid-cols-2 my-4">
+          <div className="grid sm:grid-cols-2 my-4">
             <div>
               <div>
                 <FcAcceptDatabase className="w-full text-[42px] mb-2" />
@@ -72,7 +72,7 @@ export default function Cms() {
       </div>
 
       {/* Third */}
-      <div className="grid sm:grid-cols-2 gap-4 mx-20 my-20 text-center">
+      <div className="grid sm:grid-cols-2 gap-4 sm:mx-20 sm:my-20 mx-5 my-5 text-center">
         <div className="card">
           <figure>
             <img src="/cms-banner-2.png" alt="cms" />
