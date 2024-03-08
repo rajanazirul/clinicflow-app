@@ -7,7 +7,7 @@ const inter = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "ClinicFlow",
-  description: "Your personal health assistant",
+  description: "Redefining Healthcare Access",
 };
 
 export default function RootLayout({

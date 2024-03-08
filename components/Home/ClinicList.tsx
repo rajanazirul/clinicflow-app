@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ClinicCard from "./ClinicCard";
-import CarCardSkelton from "./CarCardSkelton";
+import CardSkeleton from "./CardSkeleton";
 import BookingModal from "../CarBooking/BookingModal";
 import { ClinicListProps, ClinicProps } from "@/context/ClinicInterface";
 
@@ -29,7 +29,7 @@ function ClinicList(props: ClinicListProps) {
             </div>
           ))}
         {isLoaded
-          ? [1, 2, 3, 4, 5].map((item) => <CarCardSkelton key={item} />)
+          ? [1, 2, 3, 4, 5].map((item) => <CardSkeleton key={item} />)
           : null}
 
         {/* You can open the modal using ID.showModal() method */}

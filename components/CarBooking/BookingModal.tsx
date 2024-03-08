@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import CarCard from "../Home/CarCard";
 import Form from "./Form";
 import ClinicCard from "../Home/ClinicCard";
 

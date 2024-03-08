@@ -1,6 +1,5 @@
 import ClinicSection from "@/components/Home/ClinicSection";
 import FeatureList from "@/components/Home/FeatureList";
-import FeatureSection from "@/components/Home/FeatureSection";
 import Features from "@/components/Home/Features";
 import Hero from "@/components/Home/Hero";
 
@@ -11,7 +10,6 @@ export default function Home() {
       <FeatureList />
       <ClinicSection />
       <Features />
-      <FeatureSection />
     </div>
   );
 }

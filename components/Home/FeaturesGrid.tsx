@@ -38,7 +38,7 @@ const featuresData = [
   },
 ];
 
-export default function Features() {
+export default function FeaturesGrid() {
   return (
     <div className="container grid place-items-center w-full bg-base-200">
       <div className="max-w-5xl py-24 content-center justify-center">

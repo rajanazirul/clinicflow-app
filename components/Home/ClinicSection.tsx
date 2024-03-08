@@ -20,7 +20,7 @@ export default function ClinicSection() {
       <div>
         <div>
           <h1 className="text-4xl font-bold text-center mt-10 mb-5">
-            Our Clinic Partner
+            Find a Clinic
           </h1>
         </div>
         <ClinicList clinicList={clinicList} />

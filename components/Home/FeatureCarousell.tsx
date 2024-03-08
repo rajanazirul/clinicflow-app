@@ -13,7 +13,7 @@ const featuresData = [
   },
 ];
 
-export default function FeatureSection() {
+export default function FeatureCarousell() {
   return (
     <div className="pb-24">
       <div className="padding-container max-container w-full pb-24">

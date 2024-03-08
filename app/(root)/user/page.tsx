@@ -1,4 +1,5 @@
 'use client'
+import FeatureList from "@/components/Home/CmsFeaturesList";
 import Example from "@/components/Profile/Example";
 
 function User({ params }: { params: any }) {
