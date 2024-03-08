@@ -1,42 +1,45 @@
-
 export default function AboutUs() {
   return (
-    <div
-    className="container">
-      <div className="carousel rounded-box">
-  <div className="carousel-item">
-    <img src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" alt="Burger" />
-  </div> 
-  <div className="carousel-item">
-    <img src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" alt="Burger" />
-  </div> 
-  <div className="carousel-item">
-    <img src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg" alt="Burger" />
-  </div> 
-  <div className="carousel-item">
-    <img src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg" alt="Burger" />
-  </div> 
-  <div className="carousel-item">
-    <img src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg" alt="Burger" />
-  </div> 
-  <div className="carousel-item">
-    <img src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg" alt="Burger" />
-  </div> 
-  <div className="carousel-item">
-    <img src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" alt="Burger" />
-  </div>
-</div>
-<div>
-<div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col lg:flex-row">
-    <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" />
     <div>
-      <h1 className="text-5xl font-bold">About Us</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+      {/* Hero */}
+      <div className="hero min-h-[70vh] relative">
+        <div className="absolute inset-0 bg-[url('/bg-blue.png')] bg-cover bg-center"></div>
+        <div className="hero-content text-left relative">
+          <div className="max-w-md">
+            <h1 className="text-5xl font-bold text-white">
+              Our Vision and Mission
+            </h1>
+            <ul className="list-disc list-inside text-white">
+              <li className="py-3">
+                To provide the best healthcare services to all people from all
+                walks of life.
+              </li>
+              <li className="py-3">
+                Integrating MODERN design and TECHNOLOGY with HEALTHCARE.
+              </li>
+              <li className="py-3">
+                Empowering community with cutting edge healthcare solutions to
+                deliver superior and PERSONALIZED PATIENT CARE.
+              </li>
+              <li className="py-3">
+                To love and serve the people with our best capacities and
+                capabilities.
+              </li>
+              <li className="py-3">
+                To ensure healthcare is accessible for everyone. Promise to
+                adhere to good medical practice and the Hipocratic Oath.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* One Liner */}
+
+      {/* <h1>One-liner</h1>
+      <h1>Traction</h1>
+      <h1>Our Story</h1>
+      <h1>Our Team</h1> */}
     </div>
-  </div>
-</div>
-</div>
-    </div>
-  )
+  );
 }
