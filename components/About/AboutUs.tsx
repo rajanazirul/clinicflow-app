@@ -1,8 +1,10 @@
+import ComingSoon from "../Profile/ComingSoon"
+
 export default function AboutUs() {
   return (
-    <div>
+    <div className="h-[calc(100vh-6rem)]">
       {/* Hero */}
-      <div className="hero min-h-[70vh] relative">
+      {/* <div className="hero min-h-[70vh] relative">
         <div className="absolute inset-0 bg-[url('/bg-blue.png')] bg-cover bg-center"></div>
         <div className="hero-content text-left relative">
           <div className="max-w-md">
@@ -32,14 +34,15 @@ export default function AboutUs() {
             </ul>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* One Liner */}
+      <ComingSoon />
 
-      {/* <h1>One-liner</h1>
+      <h1>One-liner</h1>
       <h1>Traction</h1>
       <h1>Our Story</h1>
-      <h1>Our Team</h1> */}
+      <h1>Our Team</h1>
     </div>
   );
 }
