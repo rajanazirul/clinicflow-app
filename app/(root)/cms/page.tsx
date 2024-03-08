@@ -1,7 +1,7 @@
 import { FcBullish } from "react-icons/fc";
 import { FcAcceptDatabase } from "react-icons/fc";
 import { FaChevronRight } from "react-icons/fa";
-import Image from "next/image";
+import CmsFeaturesList from "@/components/Home/CmsFeaturesList";
 
 export default function Cms() {
   return (
@@ -24,6 +24,8 @@ export default function Cms() {
           </div>
         </div>
       </div>
+
+      <CmsFeaturesList />
 
       {/* Second */}
       <div className="grid sm:grid-cols-2 gap-10 sm:mx-20 sm:my-20 mx-5 my-5 text-center relative">

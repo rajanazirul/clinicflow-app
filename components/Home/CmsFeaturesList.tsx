@@ -6,35 +6,35 @@ const generationStepData = [
   {
     icon: <BoltIcon className="w-20 h-20 inline-block mr-2" />,
     description:
-      "Seamless Appointment Scheduling",
+      "Streamline Operations for Marketing and Technology Utilization",
     subdescription:
-      "Simplify your healthcare experience with easy online booking, offering immediate confirmation and reminders for your convenience.",
+      "Our Healthcare platform empowers clinics and pharmacies by providing full-stack technology that increase earnings and ease operations.",
   },
   {
     icon: (
       <DocumentMagnifyingGlassIcon className="w-20 h-20 inline-block mr-2" />
     ),
     description:
-      "Comprehensive Health Records",
+      "Efficiently Manage Multiple Clinics with Our Franchise Information",
     subdescription:
-      "Access your complete medical history securely online, ensuring coordinated care and informed health decisions.",
+      "Our platform includes a list card on the homepage that provides franchise information for multiple clinics",
   },
   {
     icon: <BuildingOfficeIcon className="w-20 h-20 inline-block mr-2" />,
     description:
-      "Local Clinic Insights",
+      "Simplify Clinic and Pharmacy Operations with management system",
     subdescription:
-      "Unlock a world of healthcare options with our Clinics Data Aggregator, providing detailed comparisons and insights into local clinics to help you make informed healthcare decisions.",
+      "Our technology solutions simplifies operations for clinics and pharmacies, making them more efficient and effective.",
   },
 ];
 
-export default function FeatureList() {
+export default function CmsFeaturesList() {
   return (
     <div>
       <div className="grid place-items-center bg-slate-50 w-full ">
         <div className="max-w-6xl w-full py-24 px-4 content-center justify-center">
           <h2 className="text-3xl  text-center font-bold">
-          Experience unparalleled convenience and personalized care at your fingertips
+            Increase Clinic and Pharmacy Earnings with Our Full-Stack Technology
           </h2>
           <div className="grid mt-24 md:grid-cols-3 grid-cols-1 gap-8">
             {generationStepData.map((i, k) => {
