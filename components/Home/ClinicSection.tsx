@@ -1,5 +1,5 @@
 "use client";
-import { getClinicList } from "@/services";
+import { getClinicList } from "@/services/cms";
 import { useEffect, useState } from "react";
 import ClinicList from "./ClinicList";
 
