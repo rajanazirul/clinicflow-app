@@ -28,7 +28,7 @@ export default function Footer() {
         <aside className="items-center grid-flow-col">
           
           <p>
-            Faezah Healthcare Sdn Bhd © {new Date().getFullYear()}<br />
+            Medisync Systems Sdn Bhd © {new Date().getFullYear()}<br />
             Providing the best healthcare solutions
           </p>
         </aside>
