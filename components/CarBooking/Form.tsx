@@ -1,5 +1,5 @@
 import { BookCreatedFlagContext } from "@/context/BookCreatedFlagContext";
-import { createBooking, getStoreLocations } from "@/services";
+import { createBooking, getStoreLocations } from "@/services/cms";
 import React, { use, useContext, useEffect, useState } from "react";
 import { useUser } from "@clerk/nextjs";
 
