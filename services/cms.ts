@@ -2,31 +2,6 @@ import request, { gql } from "graphql-request";
 
 const MASTER_URL = "https://api-ap-southeast-2.hygraph.com/v2/clsty5gtl0dv807w3h43tq1jm/master" || "";
 
-export const getCarsList = async () => {
-  const query = gql`
-    query CarLists {
-      carLists {
-        carAvg
-        createdAt
-        id
-        name
-        price
-        publishedAt
-        updatedAt
-        seat
-        image {
-          url
-        }
-        carType
-        carBrand
-      }
-    }
-  `;
-
-  const result = await request(MASTER_URL, query);
-  return result;
-};
-
 export const getClinicList = async () => {
   const query = gql`
     query Clinics {
