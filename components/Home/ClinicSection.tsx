@@ -2,6 +2,7 @@
 import { getClinicList } from "@/services/cms";
 import { useEffect, useState } from "react";
 import ClinicList from "./ClinicList";
+import Search from "@/components/Search/Search";
 
 export default function ClinicSection() {
   const [clinicList, setClinicList] = useState<any>([]);
@@ -13,6 +14,7 @@ export default function ClinicSection() {
   const getClinicList_ = async () => {
     const result: any = await getClinicList();
     setClinicList(result?.clinics);
+    console.log(result);
   };
 
   return (
@@ -23,6 +25,8 @@ export default function ClinicSection() {
             Find a Clinic
           </h1>
         </div>
+
+        <Search />
         <ClinicList clinicList={clinicList} />
       </div>
     </div>

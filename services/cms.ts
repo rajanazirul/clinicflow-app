@@ -28,6 +28,33 @@ export const getClinicList = async () => {
   return result;
 };
 
+// Get clinic details by name and address
+export const getClinicListBySearch = async (name: string, address: string) => {
+  const query = gql`
+    query Clinics($name: String, $address: String) {
+      clinics(name: $name, address: $address) {
+        address
+        createdAt
+        image {
+          url
+        }
+        geo {
+          latitude
+          longitude
+        }
+        id
+        name
+        publishedAt
+        telephone
+        updatedAt
+      }
+    }
+  `;
+
+  const result = await request(MASTER_URL, query, { name, address });
+  return result;
+};
+
 export const getStoreLocations = async () => {
   const query = gql`
     query storeLocation {
